@@ -1,34 +1,20 @@
 Extend the Flask project.
 
-Implement a fixtures endpoint that returns the next 20 Premier League matches.
+Create a fixtures repository that reads fixture data from:
 
-Endpoint:
+app/data/fixtures.json
+
+Implement:
 
 GET /api/fixtures
 
-For now do NOT call any external API.
+The endpoint should return the next 20 Premier League matches.
 
-Instead return mock data with the following fields:
+Architecture:
 
-- home_team
-- away_team
-- stadium
-- kickoff_datetime
+routes -> services -> repositories
 
-Example response:
-
-[
-  {
-    "home_team": "Arsenal",
-    "away_team": "Chelsea",
-    "stadium": "Emirates Stadium",
-    "kickoff_datetime": "2026-03-15T16:30:00"
-  }
-]
-
-Architecture rules:
-- routes -> services
-- create fixture_service.py
-- keep logic outside routes
+Do not hardcode fixtures in Python.
+Load them from the JSON file instead.
 
 Return JSON.

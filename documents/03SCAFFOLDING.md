@@ -32,12 +32,14 @@ premier-match-weather-api/
 │  │  └─ stadiums.json
 │  ├─ routes/
 │  │  ├─ __init__.py
+│  │  ├─ fixtures.py
 │  │  ├─ health.py
 │  │  ├─ stadiums.py
 │  │  ├─ weather.py
 │  │  └─ frontend.py
 │  ├─ services/
 │  │  ├─ __init__.py
+│  │  ├─ fixture_service.py
 │  │  ├─ stadium_service.py
 │  │  └─ weather_service.py
 │  ├─ clients/
@@ -45,7 +47,8 @@ premier-match-weather-api/
 │  │  └─ weather_api_client.py
 │  ├─ repositories/
 │  │  ├─ __init__.py
-│  │  └─ stadium_repository.py
+│  │  ├─ stadium_repository.py
+│  │  └─ fixture_repository.py
 │  ├─ errors/
 │  │  ├─ __init__.py
 │  │  ├─ exceptions.py
@@ -99,6 +102,9 @@ Almacena datos estáticos del proyecto. Existe porque v1 evita base de datos. En
 ### `app/data/stadiums.json`
 Fuente estática inicial de estadios. Existe para soportar el endpoint de listado y futuras búsquedas por estadio. Debe contener datos reales mínimos.
 
+### `app/data/fixtures.json`
+Archivo de datos estático que contiene la lista de fixtures (partidos) restantes de la temporada de la Premier League. Existe para permitir que la API devuelva información de partidos sin depender de una API externa de fútbol. Cada fixture incluye el equipo local, el equipo visitante, el stadium_id correspondiente y la fecha y hora de inicio del partido. Este archivo sirve como fuente de datos para el fixture_repository.
+
 ### Carpeta `app/routes/`
 Contiene blueprints HTTP. Existe para separar endpoints por responsabilidad y mantener la app pequeña pero ordenada.
 
@@ -114,6 +120,10 @@ Endpoints relacionados con clima. En esta fase puede quedar como placeholder o s
 ### `app/routes/frontend.py`
 Ruta para servir la página principal HTML. Debe tener implementación funcional mínima.
 
+### `app/routes/frontend.py`
+Define los endpoints HTTP relacionados con fixtures (partidos). Su responsabilidad es recibir las solicitudes HTTP, delegar la lógica al fixture_service y devolver respuestas JSON al cliente. En esta fase debe exponer al menos un endpoint que permita obtener la lista de fixtures disponibles.
+
+
 ### Carpeta `app/services/`
 Orquesta lógica de aplicación. Existe para evitar que la lógica de negocio quede dentro de las rutas.
 
@@ -123,6 +133,10 @@ Capa intermedia entre rutas y repositorio de estadios. Debe contener funciones s
 ### `app/services/weather_service.py`
 Encapsula la lógica futura para clima. En esta fase debe quedar como stub o implementación mínima con firmas y docstrings.
 
+### `app/services/fixture_service.py`
+Contiene la lógica de aplicación relacionada con fixtures. Actúa como capa intermedia entre las rutas y el repositorio de fixtures. Se encarga de obtener los partidos desde fixture_repository, ordenar o filtrar los resultados cuando sea necesario y devolver los próximos partidos que serán utilizados por la API y el frontend.
+
+
 ### Carpeta `app/clients/`
 Encapsula clientes HTTP externos. Existe porque el consumo de API meteorológica debe estar aislado de rutas y servicios.
 
@@ -131,6 +145,10 @@ Base del cliente de clima. En esta fase no debe incluir integración completa, p
 
 ### Carpeta `app/repositories/`
 Acceso a fuentes de datos internas. Existe para abstraer la lectura del archivo JSON de estadios.
+
+### `app/repositories/fixture_repository.py`
+
+Encapsula el acceso a los datos de fixtures almacenados en fixtures.json. Su responsabilidad es leer el archivo, convertir los datos a estructuras Python y proporcionar funciones simples que permitan al fixture_service acceder a la lista de partidos sin depender directamente del formato del archivo
 
 ### `app/repositories/stadium_repository.py`
 Lectura de `stadiums.json`. Debe tener implementación funcional mínima.
