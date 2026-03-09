@@ -23,7 +23,7 @@ Each card must contain placeholders for:
 
 Layout:
 
-Use a responsive CSS grid with 3 cards per row.
+Use a responsive CSS grid with 4 cards per row.
 
 Each card should look like a modern sports dashboard card.
 
@@ -33,7 +33,7 @@ templates/index.html
 static/css/styles.css
 static/js/app.js
 
-The JavaScript file should include placeholder data for 10 matches and render them into the cards.
+The JavaScript file should include placeholder data for 20 matches and render them into the cards.
 
 Do not implement real API calls yet, but structure the code so that later it can call:
 
