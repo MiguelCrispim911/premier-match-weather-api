@@ -1,233 +1,53 @@
 const API_ENDPOINT = "/api/fixtures/weather";
 
-const placeholderMatches = [
-	{
-		home_team: "Arsenal",
-		away_team: "Chelsea",
-		stadium: "Emirates Stadium",
-		kickoff: "2026-03-14 12:30",
-		weather_icon: "sun",
-		temperature_c: 16,
-		humidity_percent: 54,
-		wind_speed_kmh: 12,
-		precipitation_probability_percent: 10,
-	},
-	{
-		home_team: "Liverpool",
-		away_team: "Tottenham",
-		stadium: "Anfield",
-		kickoff: "2026-03-14 15:00",
-		weather_icon: "clouds",
-		temperature_c: 13,
-		humidity_percent: 62,
-		wind_speed_kmh: 14,
-		precipitation_probability_percent: 22,
-	},
-	{
-		home_team: "Manchester City",
-		away_team: "Newcastle",
-		stadium: "Etihad Stadium",
-		kickoff: "2026-03-14 17:30",
-		weather_icon: "rain",
-		temperature_c: 11,
-		humidity_percent: 76,
-		wind_speed_kmh: 18,
-		precipitation_probability_percent: 68,
-	},
-	{
-		home_team: "Aston Villa",
-		away_team: "Brighton",
-		stadium: "Villa Park",
-		kickoff: "2026-03-15 12:00",
-		weather_icon: "clouds",
-		temperature_c: 12,
-		humidity_percent: 64,
-		wind_speed_kmh: 13,
-		precipitation_probability_percent: 30,
-	},
-	{
-		home_team: "West Ham",
-		away_team: "Brentford",
-		stadium: "London Stadium",
-		kickoff: "2026-03-15 14:00",
-		weather_icon: "rain",
-		temperature_c: 10,
-		humidity_percent: 80,
-		wind_speed_kmh: 20,
-		precipitation_probability_percent: 72,
-	},
-	{
-		home_team: "Everton",
-		away_team: "Leicester",
-		stadium: "Goodison Park",
-		kickoff: "2026-03-15 16:30",
-		weather_icon: "sun",
-		temperature_c: 14,
-		humidity_percent: 58,
-		wind_speed_kmh: 11,
-		precipitation_probability_percent: 12,
-	},
-	{
-		home_team: "Manchester United",
-		away_team: "Wolves",
-		stadium: "Old Trafford",
-		kickoff: "2026-03-16 20:00",
-		weather_icon: "clouds",
-		temperature_c: 9,
-		humidity_percent: 70,
-		wind_speed_kmh: 17,
-		precipitation_probability_percent: 34,
-	},
-	{
-		home_team: "Fulham",
-		away_team: "Crystal Palace",
-		stadium: "Craven Cottage",
-		kickoff: "2026-03-17 19:45",
-		weather_icon: "rain",
-		temperature_c: 8,
-		humidity_percent: 82,
-		wind_speed_kmh: 19,
-		precipitation_probability_percent: 66,
-	},
-	{
-		home_team: "Nottingham Forest",
-		away_team: "Bournemouth",
-		stadium: "City Ground",
-		kickoff: "2026-03-18 20:00",
-		weather_icon: "clouds",
-		temperature_c: 11,
-		humidity_percent: 67,
-		wind_speed_kmh: 15,
-		precipitation_probability_percent: 28,
-	},
-	{
-		home_team: "Burnley",
-		away_team: "Southampton",
-		stadium: "Turf Moor",
-		kickoff: "2026-03-19 20:00",
-		weather_icon: "sun",
-		temperature_c: 12,
-		humidity_percent: 56,
-		wind_speed_kmh: 10,
-		precipitation_probability_percent: 9,
-	},
-	{
-		home_team: "Leeds United",
-		away_team: "Ipswich Town",
-		stadium: "Elland Road",
-		kickoff: "2026-03-20 20:00",
-		weather_icon: "clouds",
-		temperature_c: 10,
-		humidity_percent: 69,
-		wind_speed_kmh: 16,
-		precipitation_probability_percent: 33,
-	},
-	{
-		home_team: "Chelsea",
-		away_team: "Aston Villa",
-		stadium: "Stamford Bridge",
-		kickoff: "2026-03-21 12:30",
-		weather_icon: "rain",
-		temperature_c: 9,
-		humidity_percent: 78,
-		wind_speed_kmh: 21,
-		precipitation_probability_percent: 70,
-	},
-	{
-		home_team: "Tottenham",
-		away_team: "Everton",
-		stadium: "Tottenham Hotspur Stadium",
-		kickoff: "2026-03-21 15:00",
-		weather_icon: "sun",
-		temperature_c: 15,
-		humidity_percent: 52,
-		wind_speed_kmh: 9,
-		precipitation_probability_percent: 8,
-	},
-	{
-		home_team: "Newcastle",
-		away_team: "West Ham",
-		stadium: "St James' Park",
-		kickoff: "2026-03-21 17:30",
-		weather_icon: "clouds",
-		temperature_c: 11,
-		humidity_percent: 65,
-		wind_speed_kmh: 14,
-		precipitation_probability_percent: 26,
-	},
-	{
-		home_team: "Brighton",
-		away_team: "Arsenal",
-		stadium: "Amex Stadium",
-		kickoff: "2026-03-22 14:00",
-		weather_icon: "rain",
-		temperature_c: 10,
-		humidity_percent: 81,
-		wind_speed_kmh: 18,
-		precipitation_probability_percent: 64,
-	},
-	{
-		home_team: "Brentford",
-		away_team: "Liverpool",
-		stadium: "Gtech Community Stadium",
-		kickoff: "2026-03-22 16:30",
-		weather_icon: "clouds",
-		temperature_c: 12,
-		humidity_percent: 63,
-		wind_speed_kmh: 13,
-		precipitation_probability_percent: 29,
-	},
-	{
-		home_team: "Leicester",
-		away_team: "Manchester City",
-		stadium: "King Power Stadium",
-		kickoff: "2026-03-23 20:00",
-		weather_icon: "sun",
-		temperature_c: 14,
-		humidity_percent: 57,
-		wind_speed_kmh: 11,
-		precipitation_probability_percent: 11,
-	},
-	{
-		home_team: "Wolves",
-		away_team: "Fulham",
-		stadium: "Molineux Stadium",
-		kickoff: "2026-03-24 19:45",
-		weather_icon: "clouds",
-		temperature_c: 9,
-		humidity_percent: 72,
-		wind_speed_kmh: 17,
-		precipitation_probability_percent: 36,
-	},
-	{
-		home_team: "Crystal Palace",
-		away_team: "Manchester United",
-		stadium: "Selhurst Park",
-		kickoff: "2026-03-25 20:00",
-		weather_icon: "rain",
-		temperature_c: 8,
-		humidity_percent: 83,
-		wind_speed_kmh: 20,
-		precipitation_probability_percent: 67,
-	},
-	{
-		home_team: "Bournemouth",
-		away_team: "Nottingham Forest",
-		stadium: "Vitality Stadium",
-		kickoff: "2026-03-26 20:00",
-		weather_icon: "sun",
-		temperature_c: 13,
-		humidity_percent: 55,
-		wind_speed_kmh: 10,
-		precipitation_probability_percent: 12,
-	},
-];
+const fallbackMatches = [];
 
 const weatherIconMap = {
-	sun: "☀️",
-	clouds: "☁️",
+	sunny: "☀️",
+	clear: "☀️",
+	cloudy: "☁️",
+	overcast: "☁️",
 	rain: "🌧️",
+	rainy: "🌧️",
 };
+
+function formatKickoff(value) {
+	if (!value) {
+		return "-";
+	}
+
+	const parsedDate = new Date(value);
+
+	if (Number.isNaN(parsedDate.getTime())) {
+		return value;
+	}
+
+	return parsedDate.toLocaleString("es-ES", {
+		year: "numeric",
+		month: "2-digit",
+		day: "2-digit",
+		hour: "2-digit",
+		minute: "2-digit",
+		hour12: false,
+	});
+}
+
+function normalizeMatch(match) {
+	const weather = match.weather || {};
+	const condition = String(weather.condition || "Cloudy");
+
+	return {
+		home_team: match.home_team,
+		away_team: match.away_team,
+		stadium: match.stadium,
+		kickoff: formatKickoff(match.kickoff_datetime || match.kickoff),
+		weather_icon: condition.toLowerCase(),
+		temperature_c: weather.temperature_c ?? "-",
+		humidity_percent: weather.humidity ?? "-",
+		wind_speed_kmh: weather.wind_kph ?? "-",
+		precipitation_probability_percent: weather.precipitation_probability ?? "-",
+	};
+}
 
 function createMatchCard(match) {
 	const icon = weatherIconMap[match.weather_icon] || "☁️";
@@ -261,11 +81,22 @@ function renderMatches(matches) {
 }
 
 async function loadMatches() {
-	// Placeholder only for now.
-	// Later this function can call the backend endpoint:
-	// const response = await fetch(API_ENDPOINT);
-	// const matches = await response.json();
-	renderMatches(placeholderMatches);
+	try {
+		const response = await fetch(API_ENDPOINT);
+
+		if (!response.ok) {
+			throw new Error("Failed to load fixtures");
+		}
+
+		const matches = await response.json();
+		const normalizedMatches = Array.isArray(matches)
+			? matches.map(normalizeMatch)
+			: fallbackMatches;
+
+		renderMatches(normalizedMatches);
+	} catch (error) {
+		renderMatches(fallbackMatches);
+	}
 }
 
 document.addEventListener("DOMContentLoaded", loadMatches);
