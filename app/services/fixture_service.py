@@ -1,0 +1,123 @@
+def list_next_fixtures() -> list[dict]:
+	return [
+		{
+			"home_team": "Arsenal",
+			"away_team": "Chelsea",
+			"stadium": "Emirates Stadium",
+			"kickoff_datetime": "2026-03-15T16:30:00",
+		},
+		{
+			"home_team": "Liverpool",
+			"away_team": "Tottenham",
+			"stadium": "Anfield",
+			"kickoff_datetime": "2026-03-15T19:00:00",
+		},
+		{
+			"home_team": "Manchester City",
+			"away_team": "Newcastle",
+			"stadium": "Etihad Stadium",
+			"kickoff_datetime": "2026-03-16T14:00:00",
+		},
+		{
+			"home_team": "Aston Villa",
+			"away_team": "Brighton",
+			"stadium": "Villa Park",
+			"kickoff_datetime": "2026-03-16T16:30:00",
+		},
+		{
+			"home_team": "West Ham",
+			"away_team": "Brentford",
+			"stadium": "London Stadium",
+			"kickoff_datetime": "2026-03-16T19:30:00",
+		},
+		{
+			"home_team": "Everton",
+			"away_team": "Leicester",
+			"stadium": "Goodison Park",
+			"kickoff_datetime": "2026-03-17T20:00:00",
+		},
+		{
+			"home_team": "Manchester United",
+			"away_team": "Wolves",
+			"stadium": "Old Trafford",
+			"kickoff_datetime": "2026-03-18T20:00:00",
+		},
+		{
+			"home_team": "Fulham",
+			"away_team": "Crystal Palace",
+			"stadium": "Craven Cottage",
+			"kickoff_datetime": "2026-03-19T19:45:00",
+		},
+		{
+			"home_team": "Nottingham Forest",
+			"away_team": "Bournemouth",
+			"stadium": "City Ground",
+			"kickoff_datetime": "2026-03-20T20:00:00",
+		},
+		{
+			"home_team": "Burnley",
+			"away_team": "Southampton",
+			"stadium": "Turf Moor",
+			"kickoff_datetime": "2026-03-21T12:30:00",
+		},
+		{
+			"home_team": "Leeds United",
+			"away_team": "Ipswich Town",
+			"stadium": "Elland Road",
+			"kickoff_datetime": "2026-03-21T15:00:00",
+		},
+		{
+			"home_team": "Chelsea",
+			"away_team": "Aston Villa",
+			"stadium": "Stamford Bridge",
+			"kickoff_datetime": "2026-03-21T17:30:00",
+		},
+		{
+			"home_team": "Tottenham",
+			"away_team": "Everton",
+			"stadium": "Tottenham Hotspur Stadium",
+			"kickoff_datetime": "2026-03-22T14:00:00",
+		},
+		{
+			"home_team": "Newcastle",
+			"away_team": "West Ham",
+			"stadium": "St James' Park",
+			"kickoff_datetime": "2026-03-22T16:30:00",
+		},
+		{
+			"home_team": "Brighton",
+			"away_team": "Arsenal",
+			"stadium": "Amex Stadium",
+			"kickoff_datetime": "2026-03-22T19:00:00",
+		},
+		{
+			"home_team": "Brentford",
+			"away_team": "Liverpool",
+			"stadium": "Gtech Community Stadium",
+			"kickoff_datetime": "2026-03-23T20:00:00",
+		},
+		{
+			"home_team": "Leicester",
+			"away_team": "Manchester City",
+			"stadium": "King Power Stadium",
+			"kickoff_datetime": "2026-03-24T20:00:00",
+		},
+		{
+			"home_team": "Wolves",
+			"away_team": "Fulham",
+			"stadium": "Molineux Stadium",
+			"kickoff_datetime": "2026-03-25T19:45:00",
+		},
+		{
+			"home_team": "Crystal Palace",
+			"away_team": "Manchester United",
+			"stadium": "Selhurst Park",
+			"kickoff_datetime": "2026-03-26T20:00:00",
+		},
+		{
+			"home_team": "Barcelona",
+			"away_team": "Nottingham Forest",
+			"stadium": "Vitality Stadium",
+			"kickoff_datetime": "2026-03-27T20:00:00",
+		},
+	]
