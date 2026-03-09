@@ -1,5 +1,6 @@
 from flask import Flask
 
+from app.errors.handlers import register_error_handlers
 from app.routes.fixture import fixture_bp
 from app.routes.frontend import frontend_bp
 from app.routes.health import health_bp
@@ -15,5 +16,6 @@ def create_app() -> Flask:
 	app.register_blueprint(fixture_bp)
 	app.register_blueprint(weather_bp)
 	app.register_blueprint(frontend_bp)
+	register_error_handlers(app)
 
 	return app

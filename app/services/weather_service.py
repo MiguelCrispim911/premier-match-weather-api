@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 
 from app.config import WEATHER_CACHE_ERROR_SECONDS, WEATHER_CACHE_SUCCESS_SECONDS
 from app.clients.weather_api_client import get_hourly_forecast_for_kickoff
@@ -16,7 +16,7 @@ def _cache_key(latitude: float, longitude: float, kickoff_datetime: datetime) ->
 
 
 def _utc_now() -> datetime:
-	return datetime.utcnow()
+	return datetime.now(UTC)
 
 
 def _get_hourly_forecast_cached(
