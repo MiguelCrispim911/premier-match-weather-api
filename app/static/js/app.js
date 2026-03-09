@@ -80,7 +80,19 @@ function renderMatches(matches) {
 	grid.innerHTML = matches.slice(0, 20).map(createMatchCard).join("");
 }
 
+function setLoadingState(isLoading) {
+	const loadingState = document.getElementById("loading-state");
+
+	if (!loadingState) {
+		return;
+	}
+
+	loadingState.classList.toggle("hidden", !isLoading);
+}
+
 async function loadMatches() {
+	setLoadingState(true);
+
 	try {
 		const response = await fetch(API_ENDPOINT);
 
@@ -96,6 +108,8 @@ async function loadMatches() {
 		renderMatches(normalizedMatches);
 	} catch (error) {
 		renderMatches(fallbackMatches);
+	} finally {
+		setLoadingState(false);
 	}
 }
 
