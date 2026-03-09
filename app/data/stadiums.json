@@ -1,0 +1,182 @@
+[
+  {
+    "id": "emirates",
+    "name": "Emirates Stadium",
+    "team": "Arsenal",
+    "city": "London",
+    "latitude": 51.5550,
+    "longitude": -0.1086,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "villa-park",
+    "name": "Villa Park",
+    "team": "Aston Villa",
+    "city": "Birmingham",
+    "latitude": 52.5092,
+    "longitude": -1.8847,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "dean-court",
+    "name": "Dean Court",
+    "team": "Bournemouth",
+    "city": "Bournemouth",
+    "latitude": 50.7352,
+    "longitude": -1.8383,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "brentford-community",
+    "name": "Brentford Community Stadium",
+    "team": "Brentford",
+    "city": "London",
+    "latitude": 51.4907,
+    "longitude": -0.2890,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "falmer",
+    "name": "Falmer Stadium",
+    "team": "Brighton & Hove Albion",
+    "city": "Falmer",
+    "latitude": 50.8618,
+    "longitude": -0.0833,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "turf-moor",
+    "name": "Turf Moor",
+    "team": "Burnley",
+    "city": "Burnley",
+    "latitude": 53.7892,
+    "longitude": -2.2303,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "stamford-bridge",
+    "name": "Stamford Bridge",
+    "team": "Chelsea",
+    "city": "London",
+    "latitude": 51.4817,
+    "longitude": -0.1911,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "selhurst-park",
+    "name": "Selhurst Park",
+    "team": "Crystal Palace",
+    "city": "London",
+    "latitude": 51.3983,
+    "longitude": -0.0856,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "hill-dickinson",
+    "name": "Hill Dickinson Stadium",
+    "team": "Everton",
+    "city": "Liverpool",
+    "latitude": 53.4250,
+    "longitude": -3.0028,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "craven-cottage",
+    "name": "Craven Cottage",
+    "team": "Fulham",
+    "city": "London",
+    "latitude": 51.4750,
+    "longitude": -0.2217,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "elland-road",
+    "name": "Elland Road",
+    "team": "Leeds United",
+    "city": "Leeds",
+    "latitude": 53.7778,
+    "longitude": -1.5722,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "anfield",
+    "name": "Anfield",
+    "team": "Liverpool",
+    "city": "Liverpool",
+    "latitude": 53.4308,
+    "longitude": -2.9608,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "etihad",
+    "name": "Etihad Stadium",
+    "team": "Manchester City",
+    "city": "Manchester",
+    "latitude": 53.4831,
+    "longitude": -2.2004,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "old-trafford",
+    "name": "Old Trafford",
+    "team": "Manchester United",
+    "city": "Manchester",
+    "latitude": 53.4631,
+    "longitude": -2.2913,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "st-james-park",
+    "name": "St James' Park",
+    "team": "Newcastle United",
+    "city": "Newcastle upon Tyne",
+    "latitude": 54.9756,
+    "longitude": -1.6217,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "city-ground",
+    "name": "City Ground",
+    "team": "Nottingham Forest",
+    "city": "Nottingham",
+    "latitude": 52.9400,
+    "longitude": -1.1328,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "stadium-of-light",
+    "name": "Stadium of Light",
+    "team": "Sunderland",
+    "city": "Sunderland",
+    "latitude": 54.9144,
+    "longitude": -1.3882,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "tottenham-hotspur-stadium",
+    "name": "Tottenham Hotspur Stadium",
+    "team": "Tottenham Hotspur",
+    "city": "London",
+    "latitude": 51.6043,
+    "longitude": -0.0670,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "london-stadium",
+    "name": "London Stadium",
+    "team": "West Ham United",
+    "city": "London",
+    "latitude": 51.5388,
+    "longitude": -0.0171,
+    "timezone": "Europe/London"
+  },
+  {
+    "id": "molineux",
+    "name": "Molineux Stadium",
+    "team": "Wolverhampton Wanderers",
+    "city": "Wolverhampton",
+    "latitude": 52.5903,
+    "longitude": -2.1303,
+    "timezone": "Europe/London"
+  }
+]
