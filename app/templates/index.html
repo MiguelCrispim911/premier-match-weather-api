@@ -9,13 +9,27 @@
 	<body>
 		<main class="page">
 			<header class="page-header">
-				<h1>Premier Match Weather Dashboard</h1>
+				<h1>🏆 Premier Match Weather Dashboard</h1>
 				<p>Próximos 20 partidos de la Premier League</p>
 			</header>
 
 			<section id="loading-state" class="loading-state" aria-live="polite">
 				<div class="spinner" aria-hidden="true"></div>
 				<p>Cargando datos de partidos y clima...</p>
+			</section>
+
+			<section class="weather-legend" aria-label="Leyenda de iconos del clima">
+				<p class="weather-legend-title">Leyenda de iconos:</p>
+				<ul class="weather-legend-list">
+					<li><span aria-hidden="true">☀️</span> Despejado/Soleado</li>
+					<li><span aria-hidden="true">☁️</span> Nublado</li>
+					<li><span aria-hidden="true">🌫️</span> Niebla</li>
+					<li><span aria-hidden="true">🌦️</span> Llovizna</li>
+					<li><span aria-hidden="true">🌧️</span> Lluvia</li>
+					<li><span aria-hidden="true">❄️</span> Nieve</li>
+					<li><span aria-hidden="true">⛈️</span> Tormenta</li>
+					<li><span aria-hidden="true">❓</span> Estado desconocido</li>
+				</ul>
 			</section>
 
 			<section id="matches-grid" class="matches-grid" aria-live="polite"></section>

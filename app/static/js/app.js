@@ -7,8 +7,13 @@ const weatherIconMap = {
 	clear: "☀️",
 	cloudy: "☁️",
 	overcast: "☁️",
+	fog: "🌫️",
+	drizzle: "🌦️",
 	rain: "🌧️",
 	rainy: "🌧️",
+	snow: "❄️",
+	thunderstorm: "⛈️",
+	unknown: "❓",
 };
 
 function formatKickoff(value) {

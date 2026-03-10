@@ -1,0 +1,16 @@
+Existen algunos ultimos cambios que son necesarios
+- Colocar spinner mas texto al act
+- Noto que la logica de programacion de fixture_stadium solo son mostrados los primeros 20 eventos. Necesito que muestre los proximos 20 habiendo un fitro con now (este now debe estar de acuerdo con el fus horario de londres) o sea no puede mostrar eventos pasados.
+- Noto que solo hay 3 tipos de iconos para el estado meteriologico. Por favor incluir posibilidades de "Drizzle", "Fog", "Snow", entre otros que la aplicacion externa tenga por defecto. Incluir en el front-end una explicacion para todos los iconos.
+- Es posible usar en el frontend colores parecidos a los normalmente usados en la premier league:
+Morado oscuro principal: rgb(65, 21, 110)
+
+Morado profundo: rgb(65, 9, 90)
+Morado muy oscuro: rgb(56, 4, 73)
+Violeta / lila: rgb(105, 90, 228)
+Azul lavanda: rgb(88, 131, 212)
+Turquesa medio: rgb(68, 174, 194)
+Turquesa brillante: rgb(48, 212, 175)
+Morado acento: rgb(87, 32, 152)
+
+No es necesario usar todos, pueden usarse solo 2 o 3. Que quede con un estilo bonito y moderno. Profesional como si fuera la Premier League a hacerlo.
