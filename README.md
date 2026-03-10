@@ -201,3 +201,6 @@ Current test coverage includes:
 - Add authentication/authorization if needed
 - Add CI pipeline with lint + test + coverage report
 - Improve timezone handling with dedicated timezone data dependency in all environments
+
+## 16) Prompts and Documentation
+- Many of the prompts used and initial Documentation for the project are stored in the Prompts and documents folders.
